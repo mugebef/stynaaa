@@ -26,6 +26,7 @@ A Facebook-inspired social networking home page built with React, Tailwind CSS, 
    npm start
    ```
 
-## Configuration
-- The server runs on port `3000` by default.
-- Ensure your CyberPanel Node.js selector is pointed to `server.ts` (using `tsx`) or the compiled output.
+## Troubleshooting
+- **Missing Script**: If you get "Missing script: start", ensure you have updated the `package.json` with the latest version provided.
+- **Port 3000**: Ensure port 3000 is open in your CyberPanel firewall.
+- **Node Version**: This app requires Node.js 18 or higher.
