@@ -26,7 +26,20 @@ A Facebook-inspired social networking home page built with React, Tailwind CSS, 
    npm start
    ```
 
+## Using PM2 (Recommended for Production)
+If you want the app to stay running in the background, use PM2:
+```bash
+# 1. Start the app directly with Node
+pm2 start server.js --name "styn"
+
+# 2. To see logs
+pm2 logs styn
+
+# 3. To stop the app
+pm2 stop styn
+```
+
 ## Troubleshooting
-- **Missing Script**: If you get "Missing script: start", ensure you have updated the `package.json` with the latest version provided.
-- **Port 3000**: Ensure port 3000 is open in your CyberPanel firewall.
-- **Node Version**: This app requires Node.js 18 or higher.
+- **Command not found**: You likely forgot the `start` keyword. Use `pm2 start ...` instead of just `pm2 ...`.
+- **File not found**: Ensure your file is named `server.js` (not `server.ts`).
+- **Vulnerabilities**: If `npm install` shows vulnerabilities, you can run `npm audit fix`, but most are related to the development build tools and won't affect your live site.
